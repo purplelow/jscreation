@@ -1,0 +1,23 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./pages/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        Monoton: ["Monoton", "cursive"],
+        ZenTokyoZoo: ["Zen Tokyo Zoo", "cursive"],
+        Bungee: ["Bungee Outline", "cursive"],
+        BungeeShade: ["Bungee Shade", "cursive"],
+        LibreBarcode: ["Libre Barcode 39", "cursive"],
+        BlackOpsOne: ["Black Ops One", "cursive"],
+      },
+    },
+    backgroundImage: {
+      loadingRocket: "url('../public/assets/images/rocket_gif.gif')",
+    },
+  },
+  plugins: [],
+};
