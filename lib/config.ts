@@ -7,3 +7,8 @@ export const isDev =
 
 export const port = process.env.PORT || 3000;
 export const rootDomain = isDev ? `localhost:${port}` : null;
+
+export const prefix =
+  process.env.NODE_ENV === "production"
+    ? "https://purplelow.github.io/jscreation/"
+    : "";

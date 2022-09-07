@@ -6,6 +6,7 @@ import Layout from "@components/Layout";
 import Particless from "@components/Particles";
 import Intro from "@components/Intro";
 import Container from "@components/Container";
+// import { prefix } from "lib/config";
 
 const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -86,7 +87,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <Head>
-        <title>JS Creation - Junseong's portfolio</title>
+        <title>JS Creation</title>
       </Head>
       {isLoading && <Loading />}
       {!isLoading && (
