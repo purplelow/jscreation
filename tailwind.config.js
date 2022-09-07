@@ -13,9 +13,13 @@ module.exports = {
         BungeeShade: ["Bungee Shade", "cursive"],
         LibreBarcode: ["Libre Barcode 39", "cursive"],
         BlackOpsOne: ["Black Ops One", "cursive"],
+        Dancing: ["Dancing Script", "cursive"],
+        Anton: ["Anton", "sans-serif"]
       },
     },
     backgroundImage: {
+      logoWhite: "url('../public/assets/images/logoWhite.png')",
+      logoBlack: "url('../public/assets/images/logoBlack.png')",
       loadingRocket: "url('../public/assets/images/rocket_gif.gif')",
     },
   },

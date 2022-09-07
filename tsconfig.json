@@ -19,7 +19,8 @@
       "@api/*": ["pages/api/*"],
       "@components/*": ["components/*"],
       "@libs/*": ["libs/*"]
-    }
+    },
+    "typeRoots": ["./node_modules/@types", "./@types"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/index.tsx"],
   "exclude": ["node_modules"]

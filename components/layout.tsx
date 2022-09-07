@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Sling as Hamburger } from "hamburger-react";
 import LayoutProps from "interface/layout";
+import NavM from "./Nav_m";
+import Meta from "./meta";
 
 export default function Layout({
   title,
@@ -9,27 +11,64 @@ export default function Layout({
   hasTabBar,
   children,
 }: LayoutProps) {
-  const router = useRouter();
-  // const [isOpen, setOpen] = useState(false);
-  return (
-    <div className="flex h-[calc(100vh-env(safe-area-inset-bottom))] w-screen">
-      <div className="fixed top-2 left-3 z-50">
-        <Hamburger
-          easing="ease-in"
-          size={30}
-          color="rgb(209,249,248)"
-          onToggle={(toggled) => {
-            if (toggled) {
-              // open
-              return <div className="h-full w-full bg-white">asb</div>;
-            } else {
-              // closed
-            }
-          }}
-        />
-      </div>
+  // const router = useRouter();
+  const [isOpen, setOpen] = useState(false);
 
-      {children}
-    </div>
+  useEffect(() => {
+    let mouseCusor: any = document.querySelector(".cursor");
+    window.addEventListener("scroll", cursor);
+    window.addEventListener("mousemove", cursor);
+
+    function cursor(e: any) {
+      mouseCusor.style.left = e.pageX + "px";
+      mouseCusor.style.top = e.pageY + "px";
+    }
+  }, []);
+
+  const router = useRouter();
+  const onClick = () => {
+    router.back();
+  };
+
+  return (
+    <>
+      {/* <Meta /> */}
+      <div className="flex h-[calc(100vh-env(safe-area-inset-bottom))] w-screen select-none items-start justify-center">
+        <div className="fixed top-2 left-3 z-50 xl:hidden">
+          <Hamburger
+            easing="ease-in"
+            size={30}
+            rounded
+            distance="sm"
+            color="rgb(209,249,248)"
+            toggled={isOpen}
+            toggle={setOpen}
+          />
+        </div>
+        {isOpen && <NavM />}
+
+        {canGoBack ? (
+          <button onClick={onClick} className="fixed top-4 left-4 z-[9999]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-10 w-10"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+        ) : null}
+
+        {children}
+      </div>
+      <div className="cursor"></div>
+    </>
   );
 }

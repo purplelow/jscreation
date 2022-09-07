@@ -4,7 +4,7 @@ import { loadFull } from "tsparticles";
 
 export default function Particless() {
   const particlesInit = useCallback(async (engine: any) => {
-    console.log(engine);
+    // console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
@@ -12,7 +12,7 @@ export default function Particless() {
   }, []);
 
   const particlesLoaded = useCallback(async (container: any) => {
-    await console.log(container);
+    // await console.log(container);
   }, []);
   return (
     <Particles
@@ -36,7 +36,7 @@ export default function Particless() {
             stroke: {
               width: 1,
               color: "#000000",
-              opacity: 0.1,
+              opacity: 0.2,
             },
             polygon: {
               nb_sides: 6,
@@ -66,7 +66,7 @@ export default function Particless() {
             enable: true,
             distance: 110,
             color: "#52b1c8",
-            opacity: 0.6,
+            opacity: 0.7,
             width: 1,
           },
           move: {

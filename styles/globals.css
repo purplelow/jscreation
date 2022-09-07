@@ -4,13 +4,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /*keyframe - animation*/
-/*home*/
+/*intro*/
 @keyframes flipInY {
   from {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
@@ -51,4 +53,77 @@
   animation-duration: 6s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+}
+
+/* nav hover effect */
+.hoverEffect_a {
+  background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  /* display: inline-block; */
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.hoverEffect_a:before {
+  content: "";
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hoverEffect_a:hover {
+  background-position: 0;
+}
+
+.hoverEffect_a:hover::before {
+  width: 100%;
+}
+
+.hoverEffect_b {
+  --b: 0.07em;
+  --c: #c471ed;
+
+  color: #0000;
+  padding-block: var(--b);
+  background: linear-gradient(var(--c) 50%, #34495e 0) 0%
+      calc(100% - var(--_p, 0%)) / 100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b)
+      no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.3s var(--_s, 0s) linear,
+    background-size 0.3s calc(0.3s - var(--_s, 0s));
+}
+.hoverEffect_b:hover {
+  --_p: 100%;
+  --_s: 0.3s;
+}
+
+/* custom cursor */
+body {
+  cursor: none;
+}
+.cursor {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 99999;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  transition-property: background, transform;
+  transform-origin: 100% 100%;
+  backdrop-filter: sepia(20%);
+  background-size: cover;
+  background-color: #570083b9;
 }
