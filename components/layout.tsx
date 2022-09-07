@@ -48,7 +48,11 @@ export default function Layout({
         {isOpen && <NavM />}
 
         {canGoBack ? (
-          <button onClick={onClick} className="fixed top-4 left-4 z-[9999]">
+          <button
+            onClick={onClick}
+            className="fixed top-1 right-4 z-[9999] flex items-center"
+          >
+            <span>Home</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-10 w-10"

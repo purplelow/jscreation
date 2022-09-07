@@ -10,7 +10,7 @@ import { getPageTitle } from "notion-utils";
 
 import Loading from "./Loading";
 import "react-notion-x/src/styles.css";
-import { lazy } from "react";
+import { lazy, useEffect, useState } from "react";
 
 // =======================================
 // dynamic imports for optional components
@@ -107,13 +107,17 @@ export const NotionPage = ({
   const title = getPageTitle(recordMap);
   // console.log("title, recordMap :: ", title, recordMap);
 
-  if (typeof window !== "undefined") {
-    const keys = Object.keys(recordMap?.block || {});
-    const block = recordMap?.block?.[keys[0]]?.value;
+  // if (typeof window !== "undefined") {
+  const keys = Object.keys(recordMap?.block || {});
+  const block = recordMap?.block?.[keys[0]]?.value;
+  // const [g, setG]: any = useState(null);
+  useEffect(() => {
     const g = window as any;
     g.recordMap = recordMap;
     g.block = block;
-  }
+    // setG(g);
+  }, []);
+  // }
 
   const socialDescription = "React Notion X Test ==== JSCreation";
 
