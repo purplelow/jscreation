@@ -111,12 +111,12 @@ export const NotionPage = ({
   const keys = Object.keys(recordMap?.block || {});
   const block = recordMap?.block?.[keys[0]]?.value;
   // const [g, setG]: any = useState(null);
-  useEffect(() => {
-    const g = window as any;
-    g.recordMap = recordMap;
-    g.block = block;
-    // setG(g);
-  }, []);
+  // useEffect(() => {
+  //   const g = window as any;
+  //   g.recordMap = recordMap;
+  //   g.block = block;
+  //   // setG(g);
+  // }, []);
   // }
 
   const socialDescription = "React Notion X Test ==== JSCreation";

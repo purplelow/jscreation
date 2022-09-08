@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { Sling as Hamburger } from "hamburger-react";
 import LayoutProps from "interface/layout";
 import NavM from "./Nav_m";
-import Meta from "./meta";
+import { useRecoilState } from "recoil";
+import { navState } from "recoil/atom";
 
 export default function Layout({
   title,
@@ -12,7 +13,8 @@ export default function Layout({
   children,
 }: LayoutProps) {
   // const router = useRouter();
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useRecoilState(navState);
+  // const [isOpen, setOpen] = useState(false);
 
   useEffect(() => {
     let mouseCusor: any = document.querySelector(".cursor");
