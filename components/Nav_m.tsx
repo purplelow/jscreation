@@ -6,10 +6,12 @@ import Footer from "./Footer";
 export default function NavM() {
   const setOpen = useSetRecoilState(navState);
   const setLoad = useSetRecoilState(loadState);
+
   const navClose = () => {
     setOpen(false);
     setLoad(true);
   };
+
   return (
     <div className="fixed z-40 h-full w-full items-end bg-[#0ca987b8] text-white transition-shadow xl:hidden">
       <div className="my-4 pr-4">

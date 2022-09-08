@@ -1,7 +1,15 @@
 import Link from "next/link";
+import { useSetRecoilState } from "recoil";
+import { loadState } from "recoil/atom";
 import Footer from "./Footer";
 
 export default function Nav() {
+  const setLoad = useSetRecoilState(loadState);
+
+  const loadRocket = () => {
+    setLoad(true);
+  };
+
   return (
     <div className="items-strat relative z-30 hidden h-full w-[40%] items-end justify-start bg-transparent pt-[2%]  text-[#34495e] transition-shadow xl:flex">
       {/* <div className="my-4 pr-4">
@@ -11,7 +19,12 @@ export default function Nav() {
       <ul className="h-full space-y-12 text-left font-ZenTokyoZoo text-7xl uppercase">
         <li>
           <Link href="/about">
-            <a className="hoverEffect_b inline-block cursor-none">About</a>
+            <a
+              onClick={loadRocket}
+              className="hoverEffect_b inline-block cursor-none"
+            >
+              About
+            </a>
           </Link>
         </li>
         <li>
