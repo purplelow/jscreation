@@ -59,7 +59,7 @@ const Code = lazy((): any => {
 
 const Collection = dynamic(() =>
   import("react-notion-x/build/third-party/collection")
-    .then((m) => m.Collection)
+    .then(async (m) => m.Collection)
     .catch((e) => console.log(e))
 );
 
@@ -138,8 +138,9 @@ export const NotionPage = ({
         darkMode={false}
         rootDomain={rootDomain}
         rootPageId={rootPageId}
+        previewImages={false}
         components={{
-          // nextImage: Image,
+          nextImage: Image,
           nextLink: Link,
           Code,
           Collection,
