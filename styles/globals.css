@@ -103,10 +103,6 @@
   transition: 0.3s var(--_s, 0s) linear,
     background-size 0.3s calc(0.3s - var(--_s, 0s));
 }
-.hoverEffect_b:hover {
-  --_p: 100%;
-  --_s: 0.3s;
-}
 
 /* custom cursor */
 body {
@@ -130,6 +126,8 @@ body {
 
 /* ======================================== */
 .cursor {
+  --ca: scale(1);
+
   position: fixed;
   background-color: #570083b9;
   width: 10px;
@@ -140,15 +138,17 @@ body {
     0.2s cubic-bezier(0.75, -0.27, 0.3, 2.33) opacity;
   user-select: none;
   pointer-events: none;
-  transform: scale(1);
+  transform: var(--ca);
 }
 .cursor.active {
   opacity: 1;
   transform: scale(0);
 }
 .cursor-follower {
+  --cfac: 1.5px solid #570083b9;
+  /* --cfas: ; */
   position: fixed;
-  border: 1px solid #570083b9;
+  border: var(--cfac);
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -158,7 +158,14 @@ body {
     0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) background;
   user-select: none;
   pointer-events: none;
-  transform: translate(2px, 2px);
+  transform: translate(2px, 2px) var(--cfas, scale(1));
+}
+.hoverEffect_b:hover {
+  --_p: 100%;
+  --_s: 0.3s;
+  --ca: scale(0);
+  --cfac: 2px solid #003ae9;
+  --cfas: scale(2);
 }
 .cursor-follower.active {
   opacity: 1;

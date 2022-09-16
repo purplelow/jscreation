@@ -17,7 +17,7 @@ export default function Nav() {
       </div> */}
 
       <ul
-        id="cursor-active"
+        id="hoverEffect"
         className="h-full space-y-12 text-left font-ZenTokyoZoo text-7xl uppercase"
       >
         <li>

@@ -29,7 +29,9 @@ export default function Layout({
     // }
     let cursor: any = document.querySelector(".cursor"),
       follower: any = document.querySelector(".cursor-follower"),
-      cursor_active: any = document.querySelectorAll(".hoverEffect_b"),
+      cursor_active: any = document.querySelectorAll(
+        "#hoverEffect .hoverEffect_b"
+      ),
       posX = 0,
       posY = 0,
       mouseX = 0,
@@ -57,32 +59,41 @@ export default function Layout({
       },
     });
 
-    window.addEventListener("mousemove", function (e) {
+    window.addEventListener("mousemove", (e) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
     });
-    document.addEventListener("mouseenter", function () {
+    document.addEventListener("mouseenter", () => {
       // window.addEventListener -> 작동 안함 (?)
       cursor.style.cssText += "opacity: 1;";
       follower.style.cssText += "opacity: 1;";
     });
-    document.addEventListener("mouseleave", function () {
+    document.addEventListener("mouseleave", () => {
       cursor.style.cssText += "opacity: 0;";
       follower.style.cssText += "opacity: 0;";
     });
-
     for (let i = 0; i < cursor_active.length; i++) {
-      cursor_active[i].addEventListener("mouseover", function () {
-        cursor.addClass("active");
-        follower.addClass("active");
-        console.log("클래스 추가");
+      cursor_active[i].addEventListener("mouseover", () => {
+        cursor.style.cssText += "transform: scale(2);";
+        follower.style.cssText += "transform: scale(2);";
+        // cursor.addClass("active");
+        // follower.addClass("active");
+        // cursor.style.cssText += "transform: scale(0);";
+        console.log("style 추가 !");
       });
-      cursor_active[i].addEventListener("mouseout", function () {
-        cursor.removeClass("active");
-        follower.removeClass("active");
-        console.log("클래스 제거");
+      cursor_active[i].addEventListener("mouseout", () => {
+        cursor.style.cssText += "transform: scale(1);";
+        follower.style.cssText += "transform: scale(1);";
       });
     }
+    // for (let i = 0; i < cursor_active.length; i++) {
+    //   cursor_active[i].addEventListener("mouseout", function () {
+    //     // cursor.removeClass("active");
+    //     // follower.removeClass("active");
+    //     cursor.style.cssText += "transform: scale(2);";
+    //     console.log("클래스 제거");
+    //   });
+    // }
   }, []);
 
   const router = useRouter();
