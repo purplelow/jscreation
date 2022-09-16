@@ -90,7 +90,7 @@ const Home: NextPage = () => {
     <Layout>
       <Head>
         <title>JS Creation</title>
-        <link
+        {/* <link
           rel="apple-touch-icon"
           sizes="57x57"
           href="/favicons/apple-icon-57x57.png"
@@ -158,7 +158,7 @@ const Home: NextPage = () => {
           type="image/png"
           sizes="16x16"
           href="/favicons/favicon-16x16.png"
-        />
+        /> */}
         {/* <link rel="manifest" href="/public/favicon/manifest.json" /> */}
         <meta name="msapplication-TileColor" content="#ffffff" />
         {/* <meta

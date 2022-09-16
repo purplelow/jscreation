@@ -1,5 +1,4 @@
-export const rootNotionPageID =
-  "Front-end-Engineer-Junseong-Lee-53462cd7b12d4f3fa3128640ccc0fc44";
+export const rootNotionPageID = "53462cd7b12d4f3fa3128640ccc0fc44";
 
 export const previewImagesEnabled = true;
 

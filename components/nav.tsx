@@ -16,7 +16,10 @@ export default function Nav() {
         <div className="h-14 w-full bg-logoWhite bg-contain bg-right bg-no-repeat"></div>
       </div> */}
 
-      <ul className="h-full space-y-12 text-left font-ZenTokyoZoo text-7xl uppercase">
+      <ul
+        id="cursor-active"
+        className="h-full space-y-12 text-left font-ZenTokyoZoo text-7xl uppercase"
+      >
         <li>
           <Link href="/about">
             <a
@@ -38,12 +41,22 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link href="https://spectacular-epoch-b6f.notion.site/Front-end-Engineer-Junseong-Lee-53462cd7b12d4f3fa3128640ccc0fc44">
+          <Link href="https://spectacular-epoch-b6f.notion.site/Hello-Junseong-Lee-53462cd7b12d4f3fa3128640ccc0fc44">
             <a
               target="_blank"
               className="hoverEffect_b inline-block cursor-none"
             >
               Notion
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link href="https://spectacular-epoch-b6f.notion.site/99f897ceee20425085278d86745c275f">
+            <a
+              target="_blank"
+              className="hoverEffect_b inline-block cursor-none"
+            >
+              Study Log
             </a>
           </Link>
         </li>

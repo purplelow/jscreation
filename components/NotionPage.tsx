@@ -9,7 +9,6 @@ import { ExtendedRecordMap } from "notion-types";
 import { getPageTitle } from "notion-utils";
 
 import Loading from "./Loading";
-import "react-notion-x/src/styles.css";
 import { lazy, useEffect, useState } from "react";
 
 // =======================================
@@ -140,7 +139,7 @@ export const NotionPage = ({
         rootPageId={rootPageId}
         previewImages={false}
         components={{
-          nextImage: Image,
+          // nextImage: Image,
           nextLink: Link,
           Code,
           Collection,
