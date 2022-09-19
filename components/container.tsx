@@ -1,5 +1,9 @@
+import Hamburger from "hamburger-react";
 import Children from "interface/children";
 import { useEffect, useRef } from "react";
+import { useRecoilState } from "recoil";
+import { navState } from "recoil/atom";
+import NavM from "./Nav_m";
 
 export default function Container({ children }: Children) {
   // function useTilt(active: any) {
@@ -47,13 +51,26 @@ export default function Container({ children }: Children) {
   // // const active = offset === 0 ? true : null;
   // const tiltRef: any = useTilt(true);
   // console.log("tiltRef", tiltRef);
+  const [isOpen, setOpen] = useRecoilState(navState);
 
   return (
     <div
       // id="tilt"
       // ref={tiltRef}
-      className="flex h-full w-full items-center justify-center bg-black p-4 xl:bg-white"
+      className="fixed top-0 left-0 flex h-full w-full items-center justify-center bg-black p-4 xl:relative xl:bg-white"
     >
+      <div className="fixed top-2 left-3 z-50 xl:hidden">
+        <Hamburger
+          easing="ease-in"
+          size={30}
+          rounded
+          distance="sm"
+          color="rgb(209,249,248)"
+          toggled={isOpen}
+          toggle={setOpen}
+        />
+      </div>
+      {isOpen && <NavM />}
       {children}
     </div>
   );

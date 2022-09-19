@@ -25,7 +25,7 @@ const About = ({ recordMap }: { recordMap: ExtendedRecordMap }) => {
     <Layout canGoBack>
       {/* <div className="fixed top-0 left-0 z-[9998] h-screen w-screen opacity-0"></div> */}
 
-      <div className="relative z-50 w-full">
+      <div className="relative z-10 w-full">
         <NotionPage
           recordMap={recordMap}
           rootDomain={rootDomain}

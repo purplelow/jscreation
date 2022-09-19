@@ -2500,6 +2500,13 @@ quick-lru@^5.1.1:
   resolved "https://registry.npmjs.org/quick-lru/-/quick-lru-5.1.1.tgz"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
 
+react-animated-cursor@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/react-animated-cursor/-/react-animated-cursor-2.5.1.tgz#81fca461edeccb9b3757040711e3ec8ebe1c02a0"
+  integrity sha512-P+rDl/2+WYvo94X97Jk8ybD5be6UOa3aEZziU6qEToLlWvgSv6mKUtYD6k5zNjTXV024sl5E+fvbyyNCmDXnLw==
+  dependencies:
+    prop-types "^15.8.1"
+
 react-dom@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"

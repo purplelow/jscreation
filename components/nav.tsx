@@ -11,7 +11,7 @@ export default function Nav() {
   };
 
   return (
-    <div className="items-strat relative z-30 hidden h-full w-[40%] items-end justify-start bg-transparent pt-[2%]  text-[#34495e] transition-shadow xl:flex">
+    <div className="items-strat relative z-50 hidden h-full w-[40%] items-end justify-start bg-transparent pt-[2%]  text-[#34495e] transition-shadow xl:flex">
       {/* <div className="my-4 pr-4">
         <div className="h-14 w-full bg-logoWhite bg-contain bg-right bg-no-repeat"></div>
       </div> */}

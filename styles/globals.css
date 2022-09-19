@@ -175,5 +175,6 @@ body {
 
 /* tsparticles */
 #tsparticles {
-  z-index: 55;
+  position: relative;
+  z-index: 20;
 }
