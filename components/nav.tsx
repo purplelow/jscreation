@@ -41,7 +41,7 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link href="https://spectacular-epoch-b6f.notion.site/Hello-Junseong-Lee-53462cd7b12d4f3fa3128640ccc0fc44">
+          <Link href="https://spectacular-epoch-b6f.notion.site/Junseong-53462cd7b12d4f3fa3128640ccc0fc44">
             <a
               target="_blank"
               className="hoverEffect_b inline-block cursor-none"
