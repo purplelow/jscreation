@@ -19,13 +19,13 @@ export default function NavM() {
       </div>
       <div className="items-strat flex h-full justify-center pt-20">
         <ul className="space-y-12 text-center font-BungeeShade text-4xl">
-          <li>
+          {/* <li>
             <Link href="/about">
               <a onClick={navClose} className="">
                 About
               </a>
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href="https://github.com/purplelow">
               <a target="_blank" className="">
