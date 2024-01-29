@@ -20,7 +20,7 @@ export default function Nav() {
         id="hoverEffect"
         className="h-full space-y-12 text-left font-ZenTokyoZoo text-7xl uppercase"
       >
-        <li>
+        {/* <li>
           <Link href="/about">
             <a
               onClick={loadRocket}
@@ -29,7 +29,7 @@ export default function Nav() {
               About
             </a>
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link href="https://github.com/purplelow">
             <a
@@ -70,7 +70,7 @@ export default function Nav() {
             </a>
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="http://purplelow.dothome.co.kr/">
             <a
               target="_blank"
@@ -79,7 +79,7 @@ export default function Nav() {
               Design
             </a>
           </Link>
-        </li>
+        </li> */}
       </ul>
 
       <Footer />
