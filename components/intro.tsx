@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Nav from "./Nav";
+import Nav from "./nav";
 
 export default function Intro() {
   return (

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Loading from "@components/Loading";
-import Layout from "@components/Layout";
-import Particless from "@components/Particles";
-import Intro from "@components/Intro";
-import Container from "@components/Container";
+import Loading from "@components/loading";
+import Layout from "@components/layout";
+import Particless from "@components/particles";
+import Intro from "@components/intro";
+import Container from "@components/container";
 import { useRecoilState } from "recoil";
 import { loadState } from "recoil/atom";
 // import { prefix } from "lib/config";
