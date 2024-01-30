@@ -8,7 +8,7 @@ import Intro from "@components/intro";
 import Container from "@components/container";
 import { useRecoilState } from "recoil";
 import { loadState } from "recoil/atom";
-// import { prefix } from "lib/config";
+import { prefix } from "lib/config";
 
 const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useRecoilState(loadState);
